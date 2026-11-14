@@ -5,9 +5,9 @@ A Python-based data analysis tool to analyze student marks across subjects (**Ma
 ---
 
 ## Features
-- **Data Ingestion**: Loads student records from CSV files with error handling for missing or invalid data.
+- **Data Ingestion**: Loads student records from CSV files with error handling for invalid data.
 - **Result Calculation**: Computes individual student totals (out of 300), percentages, and assigns letter grades (A, B, C, D, F).
-- **Statistical Analysis**: Calculates class Mean %, Median %, Population Standard Deviation, topper(s), and subject-wise averages using **NumPy** and **Pandas**.
+- **Statistical Analysis**: Calculates class Mean %, Median %, Population Standard Deviation, topper, and subject-wise averages using **NumPy** and **Pandas**.
 - **Data Visualization**: Generates subject average bar charts and grade distribution histograms using **Matplotlib**.
 - **Interactive Console Menu**: Simple, interactive menu for running all features.
 
@@ -28,24 +28,15 @@ Each subject is scored out of 100 marks. Total marks are out of 300.
 
 ## Project Structure
 ```text
-student_performance_analyzer/
+Student_Performance_Analyzer/
 │
 ├── student_analyzer.py      # Main Python script (Console application)
-├── students.csv             # Default input data file
+├── students.csv             # Test Case 1 & 4 data (Normal input)
+├── testcase2.csv            # Test Case 2 data (Boundary input)
+├── testcase3.csv            # Test Case 3 data (Invalid input)
 ├── requirements.txt         # Required Python packages
 ├── README.md                # Project documentation
 ├── summary.md               # Summary report with test case screenshots
-│
-├── data/                    # Test case CSV files
-│   ├── testcase1_normal.csv
-│   ├── testcase2_boundary.csv
-│   ├── testcase3_invalid.csv
-│   ├── testcase4_stats.csv
-│   └── sample_students.csv
-│
-├── charts/                  # Generated charts
-│   ├── bar_chart.png
-│   └── histogram.png
 │
 └── screenshots/             # Screenshots of terminal outputs
     ├── test_case_1.png
@@ -66,7 +57,6 @@ student_performance_analyzer/
 - `matplotlib`
 
 ### Installation
-Install required packages using:
 ```bash
 pip install -r requirements.txt
 ```
@@ -82,10 +72,10 @@ python student_analyzer.py
 
 Or pass a specific CSV file:
 ```bash
-python student_analyzer.py data/testcase1_normal.csv
+python student_analyzer.py testcase2.csv
 ```
 
-### Main Menu Options:
+### Main Menu:
 ```text
 ========================================
      STUDENT PERFORMANCE ANALYZER
@@ -104,7 +94,7 @@ Enter choice (1-5):
 ## Test Cases
 
 ### Test Case 1: Normal Input
-- **Input (`data/testcase1_normal.csv`)**:
+- **Input (`students.csv`)**:
   ```csv
   Aman,80,70,90
   Riya,60,65,70
@@ -118,7 +108,7 @@ Enter choice (1-5):
   ```
 
 ### Test Case 2: Boundary / Minimum Input
-- **Input (`data/testcase2_boundary.csv`)**:
+- **Input (`testcase2.csv`)**:
   ```csv
   Neha,100,100,100
   Ravi,0,0,0
@@ -130,7 +120,7 @@ Enter choice (1-5):
   ```
 
 ### Test Case 3: Invalid Input
-- **Input (`data/testcase3_invalid.csv`)**:
+- **Input (`testcase3.csv`)**:
   ```csv
   Amit,85,abc,70
   ```
@@ -140,7 +130,7 @@ Enter choice (1-5):
   ```
 
 ### Test Case 4: Statistics & Bar Chart
-- **Input**: Same as Test Case 1
+- **Input**: Same as Test Case 1 (`students.csv`)
 - **Option 2 Output**:
   ```text
   Mean %: 62.22 | Median %: 65.00 | Std Dev: 15.77
@@ -148,16 +138,3 @@ Enter choice (1-5):
   Subject averages: Maths 60.00, Physics 56.67, Chemistry 70.00
   Bar chart displayed
   ```
-
----
-
-## GitHub Setup
-To upload this project to GitHub:
-```bash
-git init
-git add .
-git commit -m "Initial commit: Student Performance Analyzer"
-git remote add origin https://github.com/<your-username>/student-performance-analyzer.git
-git branch -M main
-git push -u origin main
-```

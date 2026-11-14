@@ -43,7 +43,7 @@ $$\text{Percentage} = \left(\frac{\text{Total}}{300}\right) \times 100$$
 
 ### Test Case 1: Normal Input
 - **Description:** Tests normal student mark records for correct total, percentage, and grade assignment.
-- **Input File (`data/testcase1_normal.csv`):**
+- **Input File (`students.csv`):**
   ```csv
   Aman,80,70,90
   Riya,60,65,70
@@ -64,7 +64,7 @@ $$\text{Percentage} = \left(\frac{\text{Total}}{300}\right) \times 100$$
 
 ### Test Case 2: Boundary / Minimum Input
 - **Description:** Tests extreme boundary conditions: maximum possible marks (100 in all subjects) and minimum marks (0 in all subjects).
-- **Input File (`data/testcase2_boundary.csv`):**
+- **Input File (`testcase2.csv`):**
   ```csv
   Neha,100,100,100
   Ravi,0,0,0
@@ -83,7 +83,7 @@ $$\text{Percentage} = \left(\frac{\text{Total}}{300}\right) \times 100$$
 
 ### Test Case 3: Invalid Input Handling
 - **Description:** Tests how the program handles invalid / non-numeric marks in the dataset.
-- **Input File (`data/testcase3_invalid.csv`):**
+- **Input File (`testcase3.csv`):**
   ```csv
   Amit,85,abc,70
   ```
@@ -100,7 +100,7 @@ $$\text{Percentage} = \left(\frac{\text{Total}}{300}\right) \times 100$$
 
 ### Test Case 4: Class Statistics & Bar Chart
 - **Description:** Tests statistical calculation and bar chart generation using the dataset from Test Case 1.
-- **Input File:** `data/testcase1_normal.csv`
+- **Input File:** `students.csv`
 - **Selected Option:** Option 2 (View Class Statistics & Bar Chart)
 - **Calculations:**
   - Mean %: $(80.00 + 65.00 + 41.67) / 3 = \mathbf{62.22\%}$
@@ -138,7 +138,7 @@ $$\text{Percentage} = \left(\frac{\text{Total}}{300}\right) \times 100$$
 | 2. Load student data with Pandas, calculate total, %, and grade | **Done** | Verified across all test cases |
 | 3. Calculate mean, median, standard deviation using NumPy/Pandas | **Done** | Exact values matching test case 4 |
 | 4. Display topper and subject-wise averages | **Done** | Correctly identifies topper and averages |
-| 5. Plot a bar chart and a histogram with proper labels | **Done** | Generated and saved in `charts/` |
+| 5. Plot a bar chart and a histogram with proper labels | **Done** | Matplotlib interactive & saved charts |
 
 ---
 

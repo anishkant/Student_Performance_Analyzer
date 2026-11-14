@@ -145,8 +145,7 @@ def plot_bar_chart(df):
     plt.grid(axis="y", linestyle="--", alpha=0.7)
     plt.tight_layout()
 
-    os.makedirs("charts", exist_ok=True)
-    plt.savefig("charts/bar_chart.png")
+    plt.savefig("bar_chart.png")
     try:
         plt.show(block=False)
         plt.pause(1.5)
@@ -171,8 +170,7 @@ def plot_histogram(df):
     plt.grid(axis="y", linestyle="--", alpha=0.7)
     plt.tight_layout()
 
-    os.makedirs("charts", exist_ok=True)
-    plt.savefig("charts/histogram.png")
+    plt.savefig("histogram.png")
     try:
         plt.show(block=False)
         plt.pause(1.5)
